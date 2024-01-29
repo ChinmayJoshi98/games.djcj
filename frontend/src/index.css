@@ -3,3 +3,58 @@
   padding: 0px;
   font-family: 'Quicksand';
 }
+
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  gap: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title {
+  margin: 20px;
+  margin-left: 10px;
+}
+
+.linkSec {
+  text-decoration: none;
+  color: azure;
+  margin: 10px;
+}
+
+.linkSec:visited {
+  color: azure;
+}
+
+.linkSec:hover {
+  color: aqua;
+  transition-duration: 1000ms;
+}
+
+.links {
+  margin: 20px;
+  margin-right: 10px;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  height: 1000px;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.content {
+  margin-top: 60px;
+}
