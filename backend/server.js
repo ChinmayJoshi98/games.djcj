@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/userRouter');
+const gameRouter = require('./routes/gameRouter');
 
 //creating the express app
 const app = express();
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
 
 //enabling routing
 app.use('/users', userRouter);
+app.use('/games', gameRouter);
 
 //connecting to mongoDB
 mongoose.connect(process.env.MNG_URL)
