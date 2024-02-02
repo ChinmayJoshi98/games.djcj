@@ -117,8 +117,8 @@ const getById = async (req, res) => {
             let game = await gameModel.find({ownerID: id}).sort({createdAt: -1});
             if(game.length === 0){
                 console.log("No games owned by this owner");
-                return res.status(404).json('No games owned!');
-            }
+                return res.status(404).json('');
+            }   
             res.status(200).json(game);
         }
         catch(err){
@@ -132,4 +132,27 @@ const getById = async (req, res) => {
     }  
 }
 
-module.exports = { getAll, getOne, addOne, delAll, delOne, updateOne, getById };
+const delById = async (req, res) => {
+    const { id } = req.params;
+    let ownerExists = await userModel.exists({userID: id});
+    if(ownerExists){
+        try{
+            let game = await gameModel.deleteMany({ownerID: id});
+            if(game.length === 0){
+                console.log("No games owned by this owner");
+                return res.status(404).json('');
+            }   
+            res.status(200).json(game);
+        }
+        catch(err){
+            console.log(err);
+            res.status(500).json(err.message);
+        }
+    }
+    else{
+        console.log("No owner with this ID");
+        res.status(404).json("No user with the given ID exists.")
+    }  
+}
+
+module.exports = { getAll, getOne, addOne, delAll, delOne, updateOne, getById, delById };

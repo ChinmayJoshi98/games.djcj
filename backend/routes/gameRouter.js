@@ -7,7 +7,8 @@ const {
     updateOne,
     delOne,
     delAll,
-    getById
+    getById,
+    delById
 } = require('../controllers/gameController');
 
 gameRouter.get('/', getAll);
@@ -17,5 +18,6 @@ gameRouter.patch('/:id', updateOne);
 gameRouter.delete('/:id', delOne);
 gameRouter.delete('/', delAll);
 gameRouter.get('/gameById/:id', getById);
+gameRouter.delete('/gameById/:id', delById);
 
 module.exports = gameRouter;

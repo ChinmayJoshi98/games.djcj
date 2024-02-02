@@ -43,18 +43,81 @@
   margin-right: 10px;
 }
 
-.temp {
+.disp {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   background-color: aquamarine;
-  height: 1000px;
-  margin: 50px;
-  padding: 50px;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .content {
-  margin-top: 60px;
+  margin-top: 80px;
+}
+
+.dropdown {
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  background-color: black;
+  color: azure;
+  border: none;
+}
+
+.add {
+  margin-top: 80px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  margin: 10px;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: aliceblue;
+  color: black;
+  transition-duration: 200ms;
+}
+
+#title:hover {
+  color: azure;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDetails {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
 }
